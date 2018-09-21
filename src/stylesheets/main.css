@@ -1,0 +1,202 @@
+@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
+@import url("https://use.typekit.net/mwh4nnq.css");
+/* Global Styling =========================================================================== */
+* {
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  margin: 0 auto; }
+
+p, a {
+  font-family: "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: none; }
+
+.navbar {
+  background-color: #010304;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  z-index: 2; }
+  .navbar p, .navbar a {
+    margin: 0;
+    color: white; }
+  .navbar a {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    padding: 0 25px; }
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.left-side, .right-side {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.cursive {
+  font: 4vw "hummingbird", cursive;
+  margin: 0; }
+
+.header {
+  margin: -40px 0 0 0;
+  text-transform: uppercase;
+  font: bold 5vw "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+
+i {
+  font-size: 30px;
+  color: #A08794; }
+
+i:hover {
+  transform: scale(0.98);
+  color: #806c76;
+  transition: .1s; }
+
+#landing-pg {
+  flex-direction: column;
+  text-align: center; }
+  #landing-pg h6 {
+    font: lighter 4vw "hummingbird", cursive;
+    margin: 0; }
+  #landing-pg h1 {
+    font: bold 7vw "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-transform: uppercase;
+    margin: -25px 0 0 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%; }
+  #landing-pg h1:before, #landing-pg h1:after {
+    background-color: #010304;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 8%;
+    border-radius: 1px; }
+  #landing-pg h1:before {
+    right: 0.5em;
+    bottom: 0.09em;
+    margin-left: -50%; }
+  #landing-pg h1:after {
+    left: 0.5em;
+    bottom: 0.09em;
+    margin-right: -50%; }
+  #landing-pg i {
+    position: absolute;
+    bottom: 2vw; }
+
+#about-pg .left-side {
+  padding: 0 0 0 8vw;
+  height: 100vh;
+  justify-content: center; }
+  #about-pg .left-side i {
+    position: relative;
+    top: 6vw; }
+
+#about-pg .headshot {
+  width: 24vw;
+  position: relative;
+  align-self: center !important;
+  top: -13vw; }
+
+#about-pg .img-background {
+  width: 27.5vw;
+  background-color: #272727;
+  height: 30vw;
+  position: relative;
+  z-index: -1;
+  top: 20vw;
+  left: -5px;
+  display: inline-block; }
+
+#education-pg .building-img, #education-pg .img-title {
+  position: relative; }
+
+#education-pg .img-title {
+  background-color: #A08794;
+  color: white;
+  font: bold 1.5vw "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  top: -14vw;
+  left: -10vw; }
+
+#education-pg #bld-one {
+  max-width: 22vw;
+  top: 11vw;
+  left: -8vw; }
+
+#education-pg #bld-two {
+  max-width: 24vw;
+  top: -5vw;
+  left: 7vw; }
+
+#education-pg .right-side {
+  padding: 0 8vw 0 0; }
+  #education-pg .right-side i {
+    position: relative;
+    top: 5vw; }
+
+#work-pg {
+  flex-direction: column; }
+  #work-pg .work-items {
+    display: flex;
+    width: 90vw;
+    padding: 35px 0 25px 0; }
+    #work-pg .work-items .position {
+      background-color: #efeef0;
+      margin: 8px;
+      width: 25%;
+      height: 255px;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer; }
+      #work-pg .work-items .position .position-text {
+        border: 1.3px solid white;
+        padding: 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #work-pg .work-items .position .position-text .company, #work-pg .work-items .position .position-text .dates-worked {
+          text-transform: uppercase;
+          font: bold 0.9vw "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+          color: #806c76; }
+        #work-pg .work-items .position .position-text .job-title {
+          margin: 0;
+          font: lighter 1.9vw "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+          color: #010304;
+          padding: 8px 0; }
+        #work-pg .work-items .position .position-text .double-title {
+          margin: 0;
+          font: lighter 1.5vw "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+        #work-pg .work-items .position .position-text .sub-dates {
+          font: bold 0.8vw "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+          text-transform: uppercase; }
+        #work-pg .work-items .position .position-text .job-description {
+          display: none; }
+    #work-pg .work-items .position:hover {
+      background-color: #A08794; }
+      #work-pg .work-items .position:hover .position-text {
+        border: 1.3px solid transparent;
+        overflow: scroll; }
+        #work-pg .work-items .position:hover .position-text .job-title, #work-pg .work-items .position:hover .position-text .double-title, #work-pg .work-items .position:hover .position-text .company, #work-pg .work-items .position:hover .position-text .dates-worked, #work-pg .work-items .position:hover .position-text .sub-dates {
+          display: none; }
+        #work-pg .work-items .position:hover .position-text .job-description {
+          display: inline; }
+  #work-pg i {
+    position: relative;
+    top: 2vw; }

@@ -1,0 +1,284 @@
+//Fonts & Colors ===============================================================================
+@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
+@import url("https://use.typekit.net/mwh4nnq.css");
+
+$cursive:"hummingbird", cursive;
+$regular:"brandon-grotesque", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+$lavender:#A08794;
+$darklav:#806c76;
+$lightgrey:#D8D5DB;
+$grey:#ADACB5;
+$darkgrey:#272727;
+$black:#010304;
+
+/* Global Styling =========================================================================== */
+* { 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    margin:0 auto;
+}
+
+p, a {
+  font-family:$regular;  
+  text-decoration: none;
+}
+
+//Navbar ==============================================================================================
+.navbar {
+    background-color:$black;
+    position: fixed;
+    top:0;
+    width:100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:10px 25px;
+    z-index: 2;
+
+    p, a{
+        margin:0;
+        color:white;
+    }
+
+    a {
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        padding:0 25px;
+    }
+}
+
+//General Page Styling ==============================================================================
+.page {
+    height:100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side, .right-side{
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cursive {
+    font: 4vw $cursive;
+    margin:0;
+}
+
+.header {
+    margin:-40px 0 0 0;
+    text-transform: uppercase;
+    font:bold 5vw $regular;
+}
+
+i {
+    font-size:30px;
+    color:$lavender;
+}
+
+i:hover {
+  transform: scale(.98); 
+  color:$darklav; 
+  transition: .1s;
+}
+
+//Landing Page =========================================================================================
+#landing-pg {
+    flex-direction: column;
+    text-align: center;
+
+    h6 {
+        font:lighter 4vw $cursive;
+        margin:0;
+    }
+
+    h1 {
+        font:bold 7vw $regular;
+        text-transform: uppercase;
+        margin:-25px 0 0 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        width: 100%;
+    }
+
+    h1:before,h1:after {
+     background-color: $black;
+     content: "";
+     display: inline-block;
+     height: 3px;
+     position: relative;
+     vertical-align: middle;
+     width: 8%;
+     border-radius: 1px;
+    }
+    h1:before {
+     right: 0.5em;
+     bottom:0.09em;
+     margin-left: -50%;
+    }
+    h1:after {
+     left: 0.5em;
+     bottom:0.09em;
+     margin-right: -50%;
+    }
+
+    i {
+       position: absolute;
+       bottom:2vw;
+    }
+}
+
+//About Page ===============================================================================
+#about-pg {
+    .left-side{
+        padding:0 0 0 8vw;
+        height:100vh;
+        justify-content: center;
+
+        i{
+            position: relative;
+            top:6vw;
+        }
+    }
+    .headshot {
+        width: 24vw;
+        position: relative;
+        align-self: center !important;
+        top:-13vw;
+    }
+    .img-background {
+        width:27.5vw;
+        background-color:$darkgrey;
+        height:30vw;
+        position: relative;
+        z-index: -1;
+        top:20vw;
+        left:-5px;
+        display: inline-block;
+    }
+}
+
+//Education Page ===============================================================================
+#education-pg {
+    .building-img, .img-title {
+        position: relative;
+    }
+
+    .img-title {
+        background-color:$lavender;
+        color:white;
+        font:bold 1.5vw $regular;
+        text-transform: uppercase;
+        padding:10px 50px;
+        top:-14vw;
+        left:-10vw;
+    }
+
+    #bld-one{
+        max-width:22vw;
+        top:11vw;
+        left:-8vw;
+    }
+
+    #bld-two{
+        max-width: 24vw;
+        top:-5vw;
+        left:7vw;
+    }
+
+    .right-side{
+        padding:0 8vw 0 0;
+
+        i {
+            position: relative;
+            top:5vw;
+        }
+    }
+}
+
+//Experience Page ===============================================================================
+#work-pg {
+    flex-direction: column;
+
+    .work-items{
+        display: flex;
+        width:90vw;
+        padding:35px 0 25px 0;
+
+        .position{
+            background-color: #efeef0;
+            margin:8px;
+            width:25%;
+            height:255px;
+            padding:15px;
+            text-align: center;
+            cursor: pointer;
+
+            .position-text {
+                border:1.3px solid white;
+                padding:10px;
+                height:100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .company, .dates-worked {
+                    text-transform: uppercase;
+                    font:bold .9vw $regular;
+                    color:$darklav;
+                }
+
+                .job-title {
+                    margin:0;
+                    font:lighter 1.9vw $regular;
+                    color:$black;
+                    padding:8px 0;
+                }
+
+                .double-title {
+                    margin:0;
+                    font:lighter 1.5vw $regular;
+                }
+
+                .sub-dates {
+                    font:bold .8vw $regular;
+                    text-transform: uppercase;
+                }
+                .job-description{
+                    display: none;
+                }
+            }
+        }
+
+        .position:hover{
+            background-color:$lavender;
+
+            .position-text {
+                border:1.3px solid transparent;
+                overflow: scroll;
+
+                .job-title, .double-title, .company, .dates-worked, .sub-dates{
+                    display: none;
+                }
+
+                .job-description {
+                    display: inline;
+                }
+            }
+        }
+    }
+    i {
+        position: relative;
+        top:2vw;
+    }
+}
