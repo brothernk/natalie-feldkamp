@@ -27,6 +27,29 @@ p, a {
   text-decoration: none;
 }
 
+i {
+    font-size:30px;
+    color:$darkgrey;
+}
+
+i:hover {
+  transform: scale(.98); 
+  color:$darklav; 
+  transition: .1s;
+}
+
+hr{
+    background-color:$lavender;
+    position: relative;
+    min-width: 100%;
+    right:0;
+    left:0;
+    height:1px;
+    border:none;
+    margin:20px 0;
+    opacity: .5;
+}
+
 //Navbar ==============================================================================================
 .navbar {
     background-color:$black;
@@ -53,10 +76,18 @@ p, a {
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .navbar {
+       .main-nav {
+           display: none;
+       }
+    }
+}
+
 //General Page Styling ==============================================================================
 .page {
-    height:100vh;
-    width:100vw;
+    min-height:100vh;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,39 +101,52 @@ p, a {
 }
 
 .cursive {
-    font: 4vw $cursive;
-    margin:0;
+    font: 40px $cursive;
+    margin:0 0 -30px 0;
 }
 
 .header {
-    margin:-40px 0 0 0;
+    margin:0;
     text-transform: uppercase;
-    font:bold 5vw $regular;
+    font:bold 50px $regular;
 }
 
-i {
-    font-size:30px;
-    color:$lavender;
-}
-
-i:hover {
-  transform: scale(.98); 
-  color:$darklav; 
-  transition: .1s;
+@media only screen and (max-width: 800px) {
+    .page {
+        flex-wrap: wrap;
+        min-height: 100%;
+    }
+    .left-side, .right-side {
+       width:100vw;
+    }
+    .cursive {
+        font-size:30px;
+    }
+    .header{
+        font-size:45px;
+    }
 }
 
 //Landing Page =========================================================================================
 #landing-pg {
     flex-direction: column;
     text-align: center;
+    min-height: 100vh;
 
+    #rose-logo{
+        width:30vw;
+        opacity: .1;
+        position: absolute;
+    }
+    
     h6 {
-        font:lighter 4vw $cursive;
+        font:lighter 51px $cursive;
         margin:0;
+        z-index: 2;
     }
 
     h1 {
-        font:bold 7vw $regular;
+        font:bold 89px $regular;
         text-transform: uppercase;
         margin:-25px 0 0 0;
         position: relative;
@@ -131,77 +175,169 @@ i:hover {
      bottom:0.09em;
      margin-right: -50%;
     }
-
-    i {
-       position: absolute;
-       bottom:2vw;
+    i{
+        position: absolute;
+        bottom:40px;
+        animation-duration: 4s;
+        animation-name: chevronPulse;
+        animation-iteration-count: infinite;
+        animation-delay: 5s;
     }
 }
 
-//About Page ===============================================================================
-#about-pg {
-    .left-side{
-        padding:0 0 0 8vw;
-        height:100vh;
-        justify-content: center;
-
-        i{
-            position: relative;
-            top:6vw;
+@media only screen and (max-width: 800px) {
+    #landing-pg {
+        h6 {
+            font-size:30px;
+        }
+        h1 {
+            font-size:50px;
         }
     }
-    .headshot {
-        width: 24vw;
-        position: relative;
-        align-self: center !important;
-        top:-13vw;
+}
+
+
+//About Page ===============================================================================
+#about-pg {
+    max-height: 100vh;
+
+    .left-side{
+        p:not(.cursive){
+            padding:10px 0 10px 5vw;
+        }
+        
+        i{
+            position: relative;
+            top:30px;
+            animation-duration: 4s;
+            animation-name: chevronPulse;
+            animation-iteration-count: infinite;
+            animation-delay: 5s;
+        }
     }
-    .img-background {
-        width:27.5vw;
-        background-color:$darkgrey;
-        height:30vw;
-        position: relative;
-        z-index: -1;
-        top:20vw;
-        left:-5px;
-        display: inline-block;
+    .right-side{
+        .headshot {
+            width: 300px;
+            position: relative;
+            top:-150px;
+        }
+        .img-background {
+            width:350px;
+            height:350px;
+            background-color:$darkgrey;
+            position: relative;
+            z-index: -1;
+            top:250px;
+            left:-7px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #about-pg{
+        max-height: 100%;
+        .left-side{
+            padding:0 20px;
+            order:2;
+
+            i{
+                display: none;
+            }
+        }
+        .right-side{
+            background-color:$darkgrey;
+            margin:30px 0 10px 0;
+
+            .headshot {
+                width:30vw;
+                position: static;
+            }
+            .img-background{
+                display: none;
+            }
+        }
     }
 }
 
 //Education Page ===============================================================================
 #education-pg {
-    .building-img, .img-title {
-        position: relative;
-    }
+    .left-side{
+        padding:0 2vw 0 0;
+        .building-img, .img-title {
+            position: relative;
+        }
 
-    .img-title {
-        background-color:$lavender;
-        color:white;
-        font:bold 1.5vw $regular;
-        text-transform: uppercase;
-        padding:10px 50px;
-        top:-14vw;
-        left:-10vw;
-    }
+        .img-title {
+            background-color:$lavender;
+            color:white;
+            font:bold 19px $regular;
+            text-transform: uppercase;
+            padding:10px 50px;
+            top:-200px;
+            left:-125px;
+        }
 
-    #bld-one{
-        max-width:22vw;
-        top:11vw;
-        left:-8vw;
-    }
+        #bld-one{
+            max-width:275px;
+            top:120px;
+            left:-100px;
+        }
 
-    #bld-two{
-        max-width: 24vw;
-        top:-5vw;
-        left:7vw;
+        #bld-two{
+            max-width: 300px;
+            top:-90px;
+            left:90px;
+        }
     }
 
     .right-side{
-        padding:0 8vw 0 0;
+        p:not(.cursive){
+            padding:10px 5vw 10px 0;
+        }
 
-        i {
+        i{
             position: relative;
-            top:5vw;
+            top:40px;
+            animation-duration: 4s;
+            animation-name: chevronPulse;
+            animation-iteration-count: infinite;
+            animation-delay: 5s;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #education-pg{
+        margin:60px 0;
+        padding:40px 0;
+
+        .right-side{
+            padding:0 20px;
+
+            i{
+                display: none;
+                animation-duration: 4s;
+                animation-name: chevronPulse;
+                animation-iteration-count: infinite;
+                animation-delay: 5s;
+            }
+        }
+
+        .left-side{
+            padding:0;
+            order:2;
+            display: flex;
+            flex-direction: row;
+            #bld-one, #bld-two{
+                left:0;
+                right:0;
+                top:unset;
+                margin:auto;
+                max-width: 40vw;
+            }
+            .img-title{
+                display: none;
+            }
         }
     }
 }
@@ -212,46 +348,48 @@ i:hover {
 
     .work-items{
         display: flex;
-        width:90vw;
         padding:35px 0 25px 0;
+        justify-content: center;
+        width:95vw;
 
         .position{
+            min-width: 250px;
+            min-height: 250px;
+            width:25%;
             background-color: #efeef0;
             margin:8px;
-            width:25%;
-            height:255px;
             padding:15px;
             text-align: center;
             cursor: pointer;
 
             .position-text {
-                border:1.3px solid white;
+                border:2px solid white;
                 padding:10px;
-                height:100%;
+                min-height: 240px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
 
                 .company, .dates-worked {
                     text-transform: uppercase;
-                    font:bold .9vw $regular;
+                    font:bold 11px $regular;
                     color:$darklav;
                 }
 
                 .job-title {
                     margin:0;
-                    font:lighter 1.9vw $regular;
+                    font:lighter 20px $regular;
                     color:$black;
                     padding:8px 0;
                 }
 
                 .double-title {
                     margin:0;
-                    font:lighter 1.5vw $regular;
+                    font:lighter 18px $regular;
                 }
 
                 .sub-dates {
-                    font:bold .8vw $regular;
+                    font:bold 9px $regular;
                     text-transform: uppercase;
                 }
                 .job-description{
@@ -259,26 +397,186 @@ i:hover {
                 }
             }
         }
-
         .position:hover{
-            background-color:$lavender;
+            transition: .25s;
+            background-color:#c6b7be;
+            transition: .15s;
 
-            .position-text {
-                border:1.3px solid transparent;
-                overflow: scroll;
+            .position-text{
+                border:unset;
+            }
 
-                .job-title, .double-title, .company, .dates-worked, .sub-dates{
-                    display: none;
-                }
+            .job-description{
+                display: block;
+            }
 
-                .job-description {
-                    display: inline;
-                }
+            .dates-worked, .sub-dates, .company{
+                display: none;
+            }
+
+            .job-title, .double-title {
+                color:white;
+                font-size:18px;
             }
         }
     }
-    i {
+    i{
         position: relative;
-        top:2vw;
+        top:10px;
+        animation-duration: 4s;
+        animation-name: chevronPulse;
+        animation-iteration-count: infinite;
+        animation-delay: 5s;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #work-pg{
+        .work-items{
+            flex-direction: column;
+            padding:0;
+
+            .position {
+                width:100%;
+                align-self: center;
+                min-height: unset;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #work-pg{
+        .work-items{
+            flex-wrap: wrap;
+
+            .position {
+                min-width:350px;
+                align-self: center;
+            }
+        }
+    }
+}
+//Contact Page ===============================================================================
+#contact-pg {
+    .left-side{
+        hr{
+            margin-bottom:50px;
+        }
+        .email,.phone{
+            font-family:$regular;
+            font-size:20px;
+            text-transform: uppercase;
+            margin:5px;
+        }  
+        .social-icons{
+            display: flex;
+            margin-top:50px;
+        }          
+        i.fab{   
+            width:35px;
+            height:35px;
+            border-radius: 50%;         
+            color:white;
+            background-color:$darkgrey;
+            font-size:18px;
+            margin:0 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        i.fab:hover{
+            background-color: $darklav;
+            transform: none;
+        }
+    }
+    .right-side{
+        margin-top:70px;
+        .cta{
+            text-align: left;
+            font-size:20px;
+            color:$lavender;
+            width:70%;
+            margin:0;
+            opacity: .3;
+            font-style: italic;
+        }
+        form{
+            width:70%;
+        }
+        .form-text p{
+            font:bold 12px $regular;
+            text-transform: uppercase;
+            margin:20px 0 2px 0;
+        }
+        input[type=text],input[type=textarea]{
+            border-radius: 4px;
+            border:1px solid $lightgrey;
+            padding:10px;
+            width:100%;
+        }
+
+        input[type=text]:focus,input[type=textarea]:focus{
+            border:1px solid $lavender;
+            outline:none;
+        }
+
+        input[type=textarea] //Kate fix this{
+            {padding:70px 0;
+        }
+        .submit-btn{
+            font:bold 16px $regular;
+            color:white;
+            background-color: $darkgrey;
+            border:none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            padding:8px 20px;
+            margin:30px 0;
+            cursor: pointer;
+        }
+        .submit-btn:hover{
+            transition: .15s;
+            transform: scale(.99);
+            background-color:$darklav;
+        }
+    }
+    i:not(.fab){
+        position: relative;
+        top:40px;
+        animation-duration: 4s;
+        animation-name: chevronPulse;
+        animation-iteration-count: infinite;
+        animation-delay: 5s;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #contact-pg{
+
+    }
+}
+
+// Animations ===============================================
+@keyframes chevronPulse {
+    0% {
+        transform: none;
+        color:$darkgrey
+    }
+    25% {
+        transform: scale(1.05);
+        color: $black;
+    }
+    50% {
+        transform: scale(1);
+        color:$darkgrey;
+    }
+    75% {
+        transform: scale(1.05);
+        color:$black
+    }
+    100% {
+        transform: none;
+        color:$darkgrey;
     }
 }

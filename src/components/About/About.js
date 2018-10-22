@@ -6,6 +6,7 @@ const About = () => (
     <div className="left-side">
       <p className="cursive">learn</p>
       <h2 className="header">About Me</h2>
+      <hr></hr>
       <p>
         Orci varius natoque penatibus et magnis dis parturient montes, 
         nascetur ridiculus mus. Sed in posuere dolor. Donec sodales, 

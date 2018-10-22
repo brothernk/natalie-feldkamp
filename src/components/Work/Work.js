@@ -12,10 +12,7 @@ const Work = () => (
           <p className="job-title">Portfolio Management Associate</p>
           <p className="dates-worked">June 2018 - Present</p>
           <p className="job-description">
-            Donec ut porta est, non dictum erat. Ut non magna et lorem efficitur 
-            mattis ac in mi. Fusce nunc lectus, dapibus eu molestie non, sollicitudin 
-            porta enim. Cras sit amet auctor odio. Sed placerat eleifend faucibus. 
-            Vestibulum gravida commodo odio, in rhoncus nibh faucibus et.
+            I don't do anything at this jobb. It's a fake job. #thx Carlson.
           </p>
         </div>
       </div>
@@ -30,8 +27,7 @@ const Work = () => (
           <p className="job-description">
             Donec ut porta est, non dictum erat. Ut non magna et lorem efficitur 
             mattis ac in mi. Fusce nunc lectus, dapibus eu molestie non, sollicitudin 
-            porta enim. Cras sit amet auctor odio. Sed placerat eleifend faucibus. 
-            Vestibulum gravida commodo odio, in rhoncus nibh faucibus et.
+            porta enim. Cras sit amet auctor odio.
           </p>
         </div>
       </div>
@@ -39,12 +35,11 @@ const Work = () => (
         <div className="position-text">
           <p className="company">Design Innovations</p>
           <p className="job-title">Business Assistant</p>
-          <p className="dates-worked"></p>
+          <p className="dates-worked">August 2016 - July 2017</p>
           <p className="job-description">
             Donec ut porta est, non dictum erat. Ut non magna et lorem efficitur 
             mattis ac in mi. Fusce nunc lectus, dapibus eu molestie non, sollicitudin 
-            porta enim. Cras sit amet auctor odio. Sed placerat eleifend faucibus. 
-            Vestibulum gravida commodo odio, in rhoncus nibh faucibus et.
+            porta enim. Cras sit amet auctor odio.
           </p>
         </div>
       </div>
@@ -56,8 +51,7 @@ const Work = () => (
           <p className="job-description">
             Donec ut porta est, non dictum erat. Ut non magna et lorem efficitur 
             mattis ac in mi. Fusce nunc lectus, dapibus eu molestie non, sollicitudin 
-            porta enim. Cras sit amet auctor odio. Sed placerat eleifend faucibus. 
-            Vestibulum gravida commodo odio, in rhoncus nibh faucibus et.
+            porta enim. Cras sit amet auctor odio.
           </p>
         </div>
       </div>
