@@ -53,7 +53,7 @@ render() {
     </div>
     <div className="right-side">
       <p className='cta'>Message Me</p>
-      <form netlify onSubmit={this.handleSubmit}>
+      <form name="contact" method="POST" data-netlify="true" onSubmit={this.handleSubmit}>
         <div className="form-text">
           <p>Name</p>
           <input className="form-entry" type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
