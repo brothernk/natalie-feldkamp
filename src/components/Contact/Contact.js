@@ -55,7 +55,7 @@ render() {
     </div>
     <div className="right-side">
       <p className='cta'>Message Me</p>
-      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"onSubmit={this.handleSubmit}>
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"onSubmit={this.handleSubmit}hidden>
         <div className="form-text">
           <p>Name</p>
           <input className="form-entry" type="text hidden" name="name" onChange={this.handleChange} value={name}/>
