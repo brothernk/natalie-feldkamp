@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 
+
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class Contact extends Component {
 
   constructor(props) {
-    super(props);
+    constructor(props);
     this.state = {
         name: '',
         email: '',
         message:'',
-        clients: []
     }
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
 }
 
 handleChange(e) {
@@ -22,21 +26,19 @@ handleChange(e) {
 }
 
 handleSubmit(e) {
-    e.preventDefault();
-    console.log("This is working")
-    const client = {
-        name: this.state.name,
-        email: this.state.email,
-        message:this.state.message
-    }
-    this.setState({
-        name: '',
-        email: '',
-        message:''
-    });
-}
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({ "form-name": "contact", ...this.state })
+  })
+    .then(() => alert("Success!"))
+    .catch(error => alert(error));
+
+  e.preventDefault();
+};
 
 render() {
+  const { name, email, message } = this.state;
   return(
   <div className="page" id="contact-pg">
     <div className="left-side">
@@ -56,11 +58,11 @@ render() {
       <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"onSubmit={this.handleSubmit}>
         <div className="form-text">
           <p>Name</p>
-          <input className="form-entry" type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
+          <input className="form-entry" type="hidden" type="text" name="name" onChange={this.handleChange} value={name}/>
           <p>Email</p>
-          <input className="form-entry" type="text" name="email" onChange={this.handleChange} value={this.state.email}/>
+          <input className="form-entry" type="hidden" type="text" name="email" onChange={this.handleChange} value={email}/>
           <p>Message</p>
-          <input className="form-entry" type="textarea" name="message" onChange={this.handleChange} value={this.state.message}/>
+          <input className="form-entry" type="hidden" type="textarea" name="message" onChange={this.handleChange} value={message}/>
         </div>
         <button className="submit-btn" onSubmit={this.handleSubmit}>Submit</button>
       </form>
