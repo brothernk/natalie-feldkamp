@@ -55,20 +55,23 @@ render() {
     </div>
     <div className="right-side">
       <p className='cta'>Message Me</p>
-      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"onSubmit={this.handleSubmit}hidden>
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"onSubmit={this.handleSubmit}>
         <div className="form-text">
           <p>Name</p>
-          <input className="form-entry" type="text hidden" name="name" onChange={this.handleChange} value={name}/>
+          <input className="form-entry" type="text" name="name" onChange={this.handleChange} value={name}/>
           <p>Email</p>
-          <input className="form-entry" type="text hidden" name="email" onChange={this.handleChange} value={email}/>
+          <input className="form-entry" type="text" name="email" onChange={this.handleChange} value={email}/>
           <p>Message</p>
-          <input className="form-entry" type="textarea hidden" name="message" onChange={this.handleChange} value={message}/>
+          <input className="form-entry" type="textarea" name="message" onChange={this.handleChange} value={message}/>
         </div>
         <button className="submit-btn" onSubmit={this.handleSubmit}>Submit</button>
       </form>
     </div>
     <i className="fas fa-angle-down"></i>
   </div>
+  
 )}
+
 }
+
 export default Contact;

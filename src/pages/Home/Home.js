@@ -18,7 +18,7 @@ class Home extends Component {
         <About></About>
         <Education></Education>
         <Work></Work>
-        <Contact></Contact>
+        <Contact></Contact>, document.getElementById("root")
         <Pictures></Pictures>
       </div>
     );
