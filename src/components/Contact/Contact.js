@@ -48,9 +48,9 @@ render() {
       <h3 className='email'>feldk008@umn.edu</h3>
       <h3 className='phone'>651.315.3643</h3>
       <div className='social-icons'>
-      <a target='_blank' href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-facebook-f"></i></a>
-        <a target='_blank' href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-instagram"></i></a>
-        <a target='_blank' href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-linkedin-in"></i></a>
+      <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-facebook-f"></i></a>
+        <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-instagram"></i></a>
+        <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-linkedin-in"></i></a>
       </div>
     </div>
     <div className="right-side">
@@ -58,11 +58,11 @@ render() {
       <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"onSubmit={this.handleSubmit}>
         <div className="form-text">
           <p>Name</p>
-          <input className="form-entry" type="text" name="name" onChange={this.handleChange} value={name}/>
+          <input className="form-entry" type="text hidden" name="name" onChange={this.handleChange} value={name}/>
           <p>Email</p>
-          <input className="form-entry" type="text" name="email" onChange={this.handleChange} value={email}/>
+          <input className="form-entry" type="text hidden" name="email" onChange={this.handleChange} value={email}/>
           <p>Message</p>
-          <input className="form-entry" type="textarea" name="message" onChange={this.handleChange} value={message}/>
+          <input className="form-entry" type="textarea hidden" name="message" onChange={this.handleChange} value={message}/>
         </div>
         <button className="submit-btn" onSubmit={this.handleSubmit}>Submit</button>
       </form>
