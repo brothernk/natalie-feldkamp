@@ -1,44 +1,43 @@
 import React, { Component } from 'react';
 
 
-const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
+// const encode = (data) => {
+//   return Object.keys(data)
+//       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+//       .join("&");
+// }
 
 class Contact extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-        name: '',
-        email: '',
-        message:'',
-    }
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//         name: '',
+//         email: '',
+//         message:'',
+//     }
 
-}
+// }
 
-handleChange = e => {
-    this.setState({
-        [e.target.name]: e.target.value
-    });
-}
+// handleChange = e => {
+//     this.setState({
+//         [e.target.name]: e.target.value
+//     });
+// }
 
-handleSubmit(e) {
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({ "form-name": "contact", ...this.state })
-  })
-    .then(() => alert("Success!"))
-    .catch(error => alert(error));
+// handleSubmit(e) {
+//   // fetch("/", {
+//   //   method: "POST",
+//   //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//   //   body: encode({ "form-name": "contact", ...this.state })
+//   // })
+//   //   .then(() => alert("Success!"))
+//   //   .catch(error => alert(error));
 
-  e.preventDefault();
-};
+//   e.preventDefault();
+// };
 
 render() {
-  const { name, email, message } = this.state;
   return( 
   <div className="page" id="contact-pg">
     <div className="left-side">
@@ -55,16 +54,16 @@ render() {
     </div>
     <div className="right-side">
       <p className='cta'>Message Me</p>
-      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"onSubmit={this.handleSubmit}>
+      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <div className="form-text">
           <p>Name</p>
-          <input className="form-entry" type="text" name="name" onChange={this.handleChange} value={name}/>
+          <input className="form-entry" type="text" name="name"/>
           <p>Email</p>
-          <input className="form-entry" type="text" name="email" onChange={this.handleChange} value={email}/>
+          <input className="form-entry" type="text" name="email"/>
           <p>Message</p>
-          <input className="form-entry" type="textarea" name="message" onChange={this.handleChange} value={message}/>
+          <input className="form-entry" type="textarea" name="message"/>
         </div>
-        <button className="submit-btn" onSubmit={this.handleSubmit}>Submit</button>
+        <button className="submit-btn">Submit</button>
       </form>
     </div>
     <i className="fas fa-angle-down"></i>
