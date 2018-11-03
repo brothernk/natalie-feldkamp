@@ -67,8 +67,8 @@ render() {
       </form>
     </div>
     <i className="fas fa-angle-down"></i>
-  </div>
-  
+  </div>,
+   document.getElementById("root")
 )}
 
 }
