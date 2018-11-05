@@ -1,72 +1,71 @@
 import React, { Component } from 'react';
-
+import resume from "./Resume.pdf";
+console.log(resume);
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 class Contact extends Component {
-
   constructor(props) {
     super(props);
-    this.state = {
-        name: '',
-        email: '',
-        message:'',
-        clients: []
-    }
+    this.state = { name: "", email: "", message: "" };
+  }
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-}
-
-handleChange(e) {
-    this.setState({
-        [e.target.name]: e.target.value
-    });
-}
-
-handleSubmit(e) {
-    e.preventDefault();
-    console.log("This is working")
-    const client = {
-        name: this.state.name,
-        email: this.state.email,
-        message:this.state.message
-    }
-    this.setState({
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+      this.setState({
         name: '',
         email: '',
         message:''
-    });
-}
+    })
 
-render() {
-  return(
-  <div className="page" id="contact-pg">
-    <div className="left-side">
-      <p className="cursive">let's</p>
-      <h2 className="header">Connect</h2>
-      <hr></hr>
-      <h3 className='email'>feldk008@umn.edu</h3>
-      <h3 className='phone'>651.315.3643</h3>
-      <div className='social-icons'>
-      <a target='_blank' href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-facebook-f"></i></a>
-        <a target='_blank' href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-instagram"></i></a>
-        <a target='_blank' href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-    <div className="right-side">
-      <p className='cta'>Message Me</p>
-      <form onSubmit={this.handleSubmit}>
-        <div className="form-text">
-          <p>Name</p>
-          <input className="form-entry" type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
-          <p>Email</p>
-          <input className="form-entry" type="text" name="email" onChange={this.handleChange} value={this.state.email}/>
-          <p>Message</p>
-          <input className="form-entry" type="textarea" name="message" onChange={this.handleChange} value={this.state.message}/>
+    e.preventDefault();
+  };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  render() {
+    const { name, email, message } = this.state;
+    return (
+      <div className="page" id="contact-pg">
+        <div className="left-side">
+          <p className="cursive">let's</p>
+          <h2 className="header">Connect</h2>
+          <hr></hr>
+          <h3 className='email'>feldk008@umn.edu</h3>
+          <h3 className='phone'>651.315.3643</h3>
+          <div className='social-icons'>
+            <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-facebook-f"></i></a>
+            <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-instagram"></i></a>
+            <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
-        <button className="submit-btn" onSubmit={this.handleSubmit}>Submit</button>
-      </form>
-    </div>
-    <i className="fas fa-angle-down"></i>
-  </div>
-)}
-}
+
+        <div className="right-side">
+          <p className='cta'>Message Me</p>
+          <form name="contact" onSubmit={this.handleSubmit}>
+          <div className="form-text">
+            <p> Name</p>
+            <input className="form-entry" type="text" name="name" value={name} onChange={this.handleChange} />
+            <p>Email</p>
+            <input className="form-entry" type="text" name="email" value={email} onChange={this.handleChange} />
+            <p> Message</p>
+            <input className="form-entry" type="textarea" name="message" value={message} onChange={this.handleChange} />
+            </div>
+            <button className="submit-btn" type="submit">Send</button>
+            </form>
+            <button className="submit-btn"><a href={resume} download>Download my Resume</a></button>
+        </div>
+       </div>
+        );
+      }
+    }
+
+
 export default Contact;
