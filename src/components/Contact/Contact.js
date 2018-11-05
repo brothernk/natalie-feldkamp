@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import resume from "../../../public/Resume.pdf";
-
+import resume from "./Resume.pdf";
+console.log(resume);
 const encode = (data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -12,8 +12,6 @@ class Contact extends Component {
     this.state = { name: "", email: "", message: "" };
   }
 
-  /* Here’s the juicy bit for posting the form submission */
-
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -22,6 +20,11 @@ class Contact extends Component {
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
+      this.setState({
+        name: '',
+        email: '',
+        message:''
+    })
 
     e.preventDefault();
   };
@@ -35,8 +38,8 @@ class Contact extends Component {
           <p className="cursive">let's</p>
           <h2 className="header">Connect</h2>
           <hr></hr>
-          <h3 className='email'>X</h3>
-          <h3 className='phone'>X</h3>
+          <h3 className='email'>feldk008@umn.edu</h3>
+          <h3 className='phone'>651.315.3643</h3>
           <div className='social-icons'>
             <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-facebook-f"></i></a>
             <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/nataliefeldkamp/'><i className="fab fa-instagram"></i></a>
@@ -46,26 +49,18 @@ class Contact extends Component {
 
         <div className="right-side">
           <p className='cta'>Message Me</p>
-          <form onSubmit={this.handleSubmit}>
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message" value={message} onChange={this.handleChange} />
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
+          <form name="contact" onSubmit={this.handleSubmit}>
+          <div className="form-text">
+            <p> Name</p>
+            <input className="form-entry" type="text" name="name" value={name} onChange={this.handleChange} />
+            <p>Email</p>
+            <input className="form-entry" type="text" name="email" value={email} onChange={this.handleChange} />
+            <p> Message</p>
+            <input className="form-entry" type="textarea" name="message" value={message} onChange={this.handleChange} />
+            </div>
+            <button className="submit-btn" type="submit">Send</button>
+            </form>
+            <button className="submit-btn"><a href={resume} download>Download my Resume</a></button>
         </div>
        </div>
         );
