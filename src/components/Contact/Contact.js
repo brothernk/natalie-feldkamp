@@ -18,7 +18,7 @@ class Contact extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Thanks for reaching out! I'll be in touch shortly."))
       .catch(error => alert(error));
       this.setState({
         name: '',
