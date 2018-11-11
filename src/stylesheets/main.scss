@@ -74,6 +74,9 @@ hr{
         text-transform: uppercase;
         padding:0 25px;
     }
+    a:hover{
+        color:$lavender;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -273,20 +276,20 @@ hr{
             font:bold 19px $regular;
             text-transform: uppercase;
             padding:10px 50px;
-            top:-200px;
-            left:-125px;
+            top:-20vw;
+            left:-12vw;
         }
 
         #bld-one{
-            max-width:275px;
-            top:120px;
-            left:-100px;
+            max-width:25vw;
+            top:10vw;
+            left:-8vw;
         }
 
         #bld-two{
-            max-width: 300px;
-            top:-90px;
-            left:90px;
+            max-width: 30vw;
+            top:-8vw;
+            left:8vw;
         }
     }
 
@@ -350,11 +353,10 @@ hr{
         display: flex;
         padding:35px 0 25px 0;
         justify-content: center;
-        width:95vw;
+        width:100vw;
+        margin:0;
 
         .position{
-            min-width: 250px;
-            min-height: 250px;
             width:25%;
             background-color: #efeef0;
             margin:8px;
@@ -365,7 +367,8 @@ hr{
             .position-text {
                 border:2px solid white;
                 padding:10px;
-                min-height: 240px;
+                height: 100%;
+                min-height: 250px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -394,6 +397,7 @@ hr{
                 }
                 .job-description{
                     display: none;
+                    overflow: scroll;
                 }
             }
         }
@@ -459,6 +463,11 @@ hr{
 }
 //Contact Page ===============================================================================
 #contact-pg {
+    flex-direction: column;
+    .contact-content{
+        display: flex; 
+        align-items: center;
+    }
     .left-side{
         hr{
             margin-bottom:50px;
@@ -553,7 +562,9 @@ hr{
 
 @media only screen and (max-width: 800px) {
     #contact-pg{
-
+        .contact-content{
+            flex-direction: column;
+        }
     }
 }
 

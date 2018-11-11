@@ -51,6 +51,8 @@ hr {
     letter-spacing: .5px;
     text-transform: uppercase;
     padding: 0 25px; }
+  .navbar a:hover {
+    color: #A08794; }
 
 @media only screen and (max-width: 800px) {
   .navbar .main-nav {
@@ -191,16 +193,16 @@ hr {
     font: bold 19px "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     text-transform: uppercase;
     padding: 10px 50px;
-    top: -200px;
-    left: -125px; }
+    top: -20vw;
+    left: -12vw; }
   #education-pg .left-side #bld-one {
-    max-width: 275px;
-    top: 120px;
-    left: -100px; }
+    max-width: 25vw;
+    top: 10vw;
+    left: -8vw; }
   #education-pg .left-side #bld-two {
-    max-width: 300px;
-    top: -90px;
-    left: 90px; }
+    max-width: 30vw;
+    top: -8vw;
+    left: 8vw; }
 
 #education-pg .right-side p:not(.cursive) {
   padding: 10px 5vw 10px 0; }
@@ -245,10 +247,9 @@ hr {
     display: flex;
     padding: 35px 0 25px 0;
     justify-content: center;
-    width: 95vw; }
+    width: 100vw;
+    margin: 0; }
     #work-pg .work-items .position {
-      min-width: 250px;
-      min-height: 250px;
       width: 25%;
       background-color: #efeef0;
       margin: 8px;
@@ -258,7 +259,8 @@ hr {
       #work-pg .work-items .position .position-text {
         border: 2px solid white;
         padding: 10px;
-        min-height: 240px;
+        height: 100%;
+        min-height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: center; }
@@ -278,7 +280,8 @@ hr {
           font: bold 9px "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
           text-transform: uppercase; }
         #work-pg .work-items .position .position-text .job-description {
-          display: none; }
+          display: none;
+          overflow: scroll; }
     #work-pg .work-items .position:hover {
       transition: .25s;
       background-color: #c6b7be;
@@ -316,83 +319,86 @@ hr {
       min-width: 350px;
       align-self: center; } }
 
-#contact-pg .left-side hr {
-  margin-bottom: 50px; }
-
-#contact-pg .left-side .email, #contact-pg .left-side .phone {
-  font-family: "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin: 5px; }
-
-#contact-pg .left-side .social-icons {
-  display: flex;
-  margin-top: 50px; }
-
-#contact-pg .left-side i.fab {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  color: white;
-  background-color: #272727;
-  font-size: 18px;
-  margin: 0 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-#contact-pg .left-side i.fab:hover {
-  background-color: #806c76;
-  transform: none; }
-
-#contact-pg .right-side {
-  margin-top: 70px; }
-  #contact-pg .right-side .cta {
-    text-align: left;
+#contact-pg {
+  flex-direction: column; }
+  #contact-pg .contact-content {
+    display: flex;
+    align-items: center; }
+  #contact-pg .left-side hr {
+    margin-bottom: 50px; }
+  #contact-pg .left-side .email, #contact-pg .left-side .phone {
+    font-family: "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 20px;
-    color: #A08794;
-    width: 70%;
-    margin: 0;
-    opacity: .3;
-    font-style: italic; }
-  #contact-pg .right-side form {
-    width: 70%; }
-  #contact-pg .right-side .form-text p {
-    font: bold 12px "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     text-transform: uppercase;
-    margin: 20px 0 2px 0; }
-  #contact-pg .right-side input[type=text], #contact-pg .right-side input[type=textarea] {
-    border-radius: 4px;
-    border: 1px solid #D8D5DB;
-    padding: 10px;
-    width: 100%; }
-  #contact-pg .right-side input[type=text]:focus, #contact-pg .right-side input[type=textarea]:focus {
-    border: 1px solid #A08794;
-    outline: none; }
-  #contact-pg .right-side input[type=textarea] {
-    padding: 70px 0; }
-  #contact-pg .right-side .submit-btn {
-    font: bold 16px "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 5px; }
+  #contact-pg .left-side .social-icons {
+    display: flex;
+    margin-top: 50px; }
+  #contact-pg .left-side i.fab {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     color: white;
     background-color: #272727;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
-    padding: 8px 20px;
-    margin: 30px 0;
-    cursor: pointer; }
-  #contact-pg .right-side .submit-btn:hover {
-    transition: .15s;
-    transform: scale(0.99);
-    background-color: #806c76; }
+    font-size: 18px;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  #contact-pg .left-side i.fab:hover {
+    background-color: #806c76;
+    transform: none; }
+  #contact-pg .right-side {
+    margin-top: 70px; }
+    #contact-pg .right-side .cta {
+      text-align: left;
+      font-size: 20px;
+      color: #A08794;
+      width: 70%;
+      margin: 0;
+      opacity: .3;
+      font-style: italic; }
+    #contact-pg .right-side form {
+      width: 70%; }
+    #contact-pg .right-side .form-text p {
+      font: bold 12px "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      text-transform: uppercase;
+      margin: 20px 0 2px 0; }
+    #contact-pg .right-side input[type=text], #contact-pg .right-side input[type=textarea] {
+      border-radius: 4px;
+      border: 1px solid #D8D5DB;
+      padding: 10px;
+      width: 100%; }
+    #contact-pg .right-side input[type=text]:focus, #contact-pg .right-side input[type=textarea]:focus {
+      border: 1px solid #A08794;
+      outline: none; }
+    #contact-pg .right-side input[type=textarea] {
+      padding: 70px 0; }
+    #contact-pg .right-side .submit-btn {
+      font: bold 16px "brandon-grotesque", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      color: white;
+      background-color: #272727;
+      border: none;
+      border-radius: 4px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      margin: 30px 0;
+      cursor: pointer; }
+    #contact-pg .right-side .submit-btn:hover {
+      transition: .15s;
+      transform: scale(0.99);
+      background-color: #806c76; }
+  #contact-pg i:not(.fab) {
+    position: relative;
+    top: 40px;
+    animation-duration: 4s;
+    animation-name: chevronPulse;
+    animation-iteration-count: infinite;
+    animation-delay: 5s; }
 
-#contact-pg i:not(.fab) {
-  position: relative;
-  top: 40px;
-  animation-duration: 4s;
-  animation-name: chevronPulse;
-  animation-iteration-count: infinite;
-  animation-delay: 5s; }
+@media only screen and (max-width: 800px) {
+  #contact-pg .contact-content {
+    flex-direction: column; } }
 
 @keyframes chevronPulse {
   0% {
