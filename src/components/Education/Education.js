@@ -14,17 +14,10 @@ const Education = () => (
       <h2 className="header">Education</h2>
       <hr></hr>
       <p>
-        Orci varius natoque penatibus et magnis dis parturient montes, 
-        nascetur ridiculus mus. Sed in posuere dolor. Donec sodales, 
-        lacus facilisis commodo ultricies, leo dui sodales dolor, nec 
-        malesuada magna augue quis quam.
+      Carlson School of Management at the University of Minnesota - Twin Cities allowed me to fulfill my life-long dreams of entering the business world. This rigorous program, presented me with countless opportunities for personal and professional growth. By achieving a B.S in Marketing and a Minor in Leadership, I was able to learn business strategies that translated to internships and professional opportunities beyond the classroom
       </p>
       <p>
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-        posuere cubilia Curae; Duis turpis tortor, rhoncus et placerat vitae, 
-        accumsan quis quam. Cras non bibendum lorem. Morbi aliquam nulla at 
-        pellentesque malesuada. Aliquam imperdiet, elit id convallis interdum, 
-        urna tortor mollis justo, nec laoreet ante augue eget velit.
+      My time in Vienna, Austria in the Wirtschaftuniversität Wien school of Business and Economics, complemented my studies by providing me with the opportunity to work collaboratively with people of different cultures and backgrounds. This was instrumental in developing my team building skills as well as  gaining valuable experience in a broad based economic program.
       </p>
       <a href="#work-pg"><i className="fas fa-angle-down"></i></a>
     </div>
