@@ -8,17 +8,10 @@ const About = () => (
       <h2 className="header">About Me</h2>
       <hr></hr>
       <p>
-        Orci varius natoque penatibus et magnis dis parturient montes, 
-        nascetur ridiculus mus. Sed in posuere dolor. Donec sodales, 
-        lacus facilisis commodo ultricies, leo dui sodales dolor, nec 
-        malesuada magna augue quis quam.
+      Minneapolis based professional with extensive experience in marketing and a degree from  Carlson School of Business. I have the skills to tackle any project; However, what distinguishes me as a team member is my relentless work ethic and an unique ability to quickly learn new skills on the job. These innate abilities paired with a passion for creative problem solving and a commitment to professionalism allow me to create lasting relationships with clients and coworkers. 
       </p>
       <p>
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-        posuere cubilia Curae; Duis turpis tortor, rhoncus et placerat vitae, 
-        accumsan quis quam. Cras non bibendum lorem. Morbi aliquam nulla at 
-        pellentesque malesuada. Aliquam imperdiet, elit id convallis interdum, 
-        urna tortor mollis justo, nec laoreet ante augue eget velit.
+      When I am not at the office you can find me trying out the latest  Twin Citie’s beer, restaurant, etc. at my grandma’s house for dinner, walking my roommates dog, watching HGTV, at a show, or traveling to a new city. (honestly IDK What to do with this section so just listed all Nat’s hobbies)..
       </p>
       <a href="#education-pg"><i className="fas fa-angle-down"></i></a>
     </div>
