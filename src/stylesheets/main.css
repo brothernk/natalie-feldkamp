@@ -388,6 +388,8 @@ hr {
       transition: .15s;
       transform: scale(0.99);
       background-color: #806c76; }
+    #contact-pg .right-side .submit-btn > a {
+      color: white; }
   #contact-pg i:not(.fab) {
     position: relative;
     top: 40px;

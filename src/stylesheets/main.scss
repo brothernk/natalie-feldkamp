@@ -549,6 +549,9 @@ hr{
             transform: scale(.99);
             background-color:$darklav;
         }
+        .submit-btn>a{
+            color:white;
+        }
     }
     i:not(.fab){
         position: relative;
