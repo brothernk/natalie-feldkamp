@@ -9,7 +9,10 @@ const Work = () => (
       <div className="position">
         <div className="position-text">
           <p className="company">The Lacek Group</p>
-          <p className="job-title">Portfolio Management Associate</p>
+          <p className="double-title">Account Executive</p>
+          <p className="sub-dates">January 2019 - Present</p>
+          <p className="double-title">Portfolio Management Associate</p>
+          <p className="sub-dates">June 2018 - Present</p>
           <p className="dates-worked">June 2018 - Present</p>
           <p className="job-description">
           At my current role I build and nurture relationships with internal team members and clients with proactive communication. I develop efficient internal communication by creating and distributing agendas in advance and meeting summaries afterwards. Furthermore, my job involves producing and maintaining project schedules and using program management tools to move projects through the agency in accordance with established processes. I also regularly seek information to understand campaign objectives and client direction while relaying these changes to the team at large.
@@ -46,7 +49,7 @@ My additional position included processing orders and streamlining shipping and 
           <p className="job-title">Publicity & Promotions Intern</p>
           <p className="dates-worked">May 2016 - Jan 2017</p>
           <p className="job-description">
-          I was responsible for building and executing promotional campaigns for upcoming films, specifically Walt Disney Studios. I managed a continuous stream of projects by creating and maintaining relationships with third-party partners for collaboration on promotional events.
+          In this position I built and executed promotional campaigns for upcoming films, specifically Walt Disney Studios. I managed a continuous stream of projects by creating and maintaining relationships with third-party partners for collaboration on promotional events.
           </p>
         </div>
       </div>
