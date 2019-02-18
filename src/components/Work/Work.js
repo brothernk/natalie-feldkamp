@@ -7,14 +7,17 @@ const Work = () => (
 
     <div className="work-items">
       <div className="position">
-        <div className="position-text">
-          <p className="company">The Lacek Group</p>
-          <p className="job-title">Portfolio Management Associate</p>
-          <p className="dates-worked">June 2018 - Present</p>
-          <p className="job-description">
-          In my current role I build and nurture relationships with internal team members and clients with proactive communication. I develop efficient internal communication by creating and distributing agendas in advance and meeting summaries afterwards. Furthermore, my job involves producing and maintaining project schedules and using program management tools to move projects through the agency in accordance with established processes. I also regularly seek information to understand campaign objectives and client direction while relaying these changes to the team at large.
-          </p>
-        </div>
+      <div className="position-text">
+      <p className="company">The Lacek Group</p>
+      <p className="double-title">Account Executive</p>
+      <p className="sub-dates">January 2019 - Present</p>
+      <p className="double-title">Portfolio Management Associate</p>
+      <p className="sub-dates">June 2018 - Present</p>
+      <p className="dates-worked">June 2018 - Present</p>
+      <p className="job-description">
+      At my current role I build and nurture relationships with internal team members and clients with proactive communication. I develop efficient internal communication by creating and distributing agendas in advance and meeting summaries afterwards. Furthermore, my job involves producing and maintaining project schedules and using program management tools to move projects through the agency in accordance with established processes. I also regularly seek information to understand campaign objectives and client direction while relaying these changes to the team at large.
+      </p>
+    </div>
       </div>
       <div className="position">
         <div className="position-text">
